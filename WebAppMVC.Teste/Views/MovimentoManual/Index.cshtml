@@ -1,0 +1,75 @@
+﻿@model IEnumerable<WebAppMVC.Teste.MOVIMENTO_MANUAL>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DAT_MES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DAT_ANO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM_LACAMENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DES_DESCRICAO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DAT_MOVIMENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COD_USUARIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VAL_VALOR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRODUTO_COSIF.COD_PRODUTO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DAT_MES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DAT_ANO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_LACAMENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DES_DESCRICAO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DAT_MOVIMENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_USUARIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VAL_VALOR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRODUTO_COSIF.COD_PRODUTO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.COD_PRODUTO }) |
+            @Html.ActionLink("Details", "Details", new { id=item.COD_PRODUTO }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.COD_PRODUTO })
+        </td>
+    </tr>
+}
+
+</table>

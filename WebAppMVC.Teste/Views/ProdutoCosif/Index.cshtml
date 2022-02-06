@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebAppMVC.Teste.PRODUTO_COSIF>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.COD_CLASSIFICACAO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STA_STATUS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRODUTO.DES_PRODUTO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_CLASSIFICACAO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STA_STATUS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRODUTO.DES_PRODUTO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.COD_COSIF }) |
+            @Html.ActionLink("Details", "Details", new { id=item.COD_COSIF }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.COD_COSIF })
+        </td>
+    </tr>
+}
+
+</table>

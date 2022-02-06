@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bb2b98cc416b4171a7011d50cd3c4553" Name="Diagram1">
+        <EntityTypeShape EntityType="BaseTesteModel.MOVIMENTO_MANUAL" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseTesteModel.PRODUTO" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseTesteModel.PRODUTO_COSIF" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="BaseTesteModel.FK_MOVIMENTO_MANUAL_PRODUTO_COSIF" ManuallyRouted="false" />
+        <AssociationConnector Association="BaseTesteModel.FK_PRODUTO_COSIF_PRODUTO" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

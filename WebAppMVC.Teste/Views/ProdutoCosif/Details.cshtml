@@ -1,0 +1,42 @@
+﻿@model WebAppMVC.Teste.PRODUTO_COSIF
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PRODUTO_COSIF</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_CLASSIFICACAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COD_CLASSIFICACAO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STA_STATUS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STA_STATUS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRODUTO.DES_PRODUTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRODUTO.DES_PRODUTO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.COD_COSIF }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

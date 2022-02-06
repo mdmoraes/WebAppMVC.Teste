@@ -1,0 +1,34 @@
+﻿@model WebAppMVC.Teste.PRODUTO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PRODUTO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DES_PRODUTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DES_PRODUTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STA_STATUS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STA_STATUS)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.COD_PRODUTO }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
